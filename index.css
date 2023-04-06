@@ -151,3 +151,25 @@ section .one {
     height: 25%;
 
 }
+
+/* search section */
+.container {
+    background-color: blue yellow;
+    width: 70vw;
+    height: 100vh;
+    max-width: 37.5em;
+    padding: 3em 2.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 245vh;
+    /* Adjust this value */
+    left: 50%;
+    border-radius: 0.62em;
+    box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25);
+}
+
+.search-wrapper {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1.25em;
+}
