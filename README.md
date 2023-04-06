@@ -22,6 +22,8 @@ CSS: CSS is a style sheet language used for describing the presentation of a doc
 
 JavaScript: JavaScript is a programming language used for creating dynamic web content.WS
 
+Public API : https://restcountries.com/
+
 # Feedback and Support
 We welcome any feedback or suggestions you may have about the website. If you encounter any issues or need support, please don't hesitate to contact  at abdirashid16112@gmail.com 
 
