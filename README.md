@@ -23,10 +23,10 @@ CSS: CSS is a style sheet language used for describing the presentation of a doc
 JavaScript: JavaScript is a programming language used for creating dynamic web content.WS
 
 # Feedback and Support
-We welcome any feedback or suggestions you may have about the website. If you encounter any issues or need support, please don't hesitate to contact  at <abdirashid16112@gmail.com .> 
+We welcome any feedback or suggestions you may have about the website. If you encounter any issues or need support, please don't hesitate to contact  at abdirashid16112@gmail.com 
 
 # Author
-Fruitify was developed by <Abdirashid Noor>.
+Geo Guide was developed by  Abdirashid Noor 
 
 # License
 Geo Guide is licensed under the MIT License. You can find the license text in the LICENSE file.
