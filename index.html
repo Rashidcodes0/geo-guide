@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEO</title>
     <!-- Importing external stylesheet -->
-    <link rel="stylesheet" href="./test.css">
+    <link rel="stylesheet" href="./index.css">
     <!-- Importing Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
     <!-- Importing external JavaScript file -->
-    <script src="./test.js"></script>
+    <script src="./index.js"></script>
 
 
 </head>
@@ -71,3 +71,105 @@
             </div>
         </div>
     </section>
+
+    <!-- Section for searching and displaying information about a specific country -->
+    <section class="search">
+        <div class="container">
+            <div class="search-wrapper">
+                <!-- Input field to enter country name -->
+                <input type="text" id="country-inp" placeholder="Enter a country name here..." />
+                <!-- Button to initiate search -->
+                <button id="search-btn">Search</button>
+            </div>
+            <!-- Div to display search results -->
+            <div id="result"></div>
+        </div>
+        <!-- JavaScript code to handle search functionality -->
+        <script>
+            // Defining variables that reference HTML elements
+            const searchBtn = document.getElementById("search-btn");
+            const countryInp = document.getElementById("country-inp");
+            const result = document.getElementById("result");
+
+            // Adding event listener to search button
+            searchBtn.addEventListener("click", () => {
+                // Getting the value of the country input field
+                const countryName = countryInp.value;
+                const finalURL = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
+
+                // Using fetch to make a GET request to the API endpoint
+                fetch(finalURL)
+                    .then(response => response.json())
+                    .then(data => {
+                        const country = data[0];
+                        // Constructing HTML elements that display information about the country
+                        const flagImg = `<img src="${country.flags.svg}" class="flag-img">`;
+                        const countryNameHeader = `<h2>${country.name.common}</h2>`;
+                        const capitalWrapper = `
+                <div class="wrapper">
+                  <div class="data-wrapper">
+                    <h4>Capital:</h4>
+                    <span>${country.capital[0]}</span>
+                  </div>
+                </div>
+              `;
+                        const continentWrapper = `
+                <div class="wrapper">
+                  <div class="data-wrapper">
+                    <h4>Continent:</h4>
+                    <span>${country.continents[0]}</span>
+                  </div>
+                </div>
+              `;
+                        const populationWrapper = `
+                <div class="wrapper">
+                  <div class="data-wrapper">
+                    <h4>Population:</h4>
+                    <span>${country.population}</span>
+                  </div>
+                </div>
+              `;
+                        const currencyWrapper = `
+                <div class="wrapper">
+                  <div class="data-wrapper">
+                    <h4>Currency:</h4>
+                    <span>${country.currencies[Object.keys(country.currencies)[0]].name} - ${Object.keys(country.currencies)[0]}</span>
+                  </div>
+                </div>
+              `;
+                        const languagesWrapper = `
+                <div class="wrapper">
+                  <div class="data-wrapper">
+                    <h4>Common Languages:</h4>
+                    <span>${Object.values(country.languages).join(", ")}</span>
+                  </div>
+                </div>
+              `;
+                        // add html elements together using template literals and assign to the "innerHTML" property of the "result" element
+                        result.innerHTML = `
+                ${flagImg}
+                ${countryNameHeader}
+                ${capitalWrapper}
+                ${continentWrapper}
+                ${populationWrapper}
+                ${currencyWrapper}
+                ${languagesWrapper}
+              `;
+                        // Handle errors if the API request fails
+                    })
+                    .catch(() => {
+                        if (countryName.length == 0) {
+                            result.innerHTML = `<h3>The input field cannot be empty</h3>`;
+                        } else {
+                            result.innerHTML = `<h3>Please enter a valid country name.</h3>`;
+                        }
+                    });
+            });
+        </script>
+    </section>
+
+
+
+</body>
+
+</html>
