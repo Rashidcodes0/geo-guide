@@ -104,3 +104,50 @@ button:hover {
     }
 
 }
+
+/* Second section */
+section .one {
+    height: 125vh;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.one {
+    background-color: #fdcc04;
+}
+
+.cointainer1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 3rem calc((100vw - 1300px) / 2);
+}
+
+.img1 {
+    width: 30%;
+    height: 30%;
+}
+
+.text {
+    text-decoration: none;
+    color: #000;
+    padding: 0 1.5rem;
+}
+
+
+
+/* style for ifile tower */
+.img2 {
+    width: 10%;
+    height: 10%;
+}
+
+.img0 {
+    width: 25%;
+    height: 25%;
+
+}
