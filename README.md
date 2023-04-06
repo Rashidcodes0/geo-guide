@@ -14,10 +14,12 @@ User-Friendly Interface: The website has a simple and intuitive interface that i
 To use the Geo Guide website, simply navigate to the home page and start searching for the country you are interested in. You can also explore the world map and click on a specific country to find out more information about it.
 
 # Technologies Used
- Geo Guide was developed using the following technologies:
+Geo Guide was developed using the following technologies:
 
 HTML: HTML is the standard markup language used for creating web pages.
+
 CSS: CSS is a style sheet language used for describing the presentation of a document written in HTML.
+
 JavaScript: JavaScript is a programming language used for creating dynamic web content.WS
 
 # Feedback and Support
