@@ -192,3 +192,12 @@ section .one {
 .search {
     background: #1DA1F2;
 }
+
+.search-wrapper input {
+    font-size: 1em;
+    padding: 0 0.62em;
+    border: none;
+    border-bottom: 2px solid #3d64e6;
+    outline: none;
+    color: #222a43;
+}
