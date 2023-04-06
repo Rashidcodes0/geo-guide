@@ -173,3 +173,22 @@ section .one {
     grid-template-columns: 9fr 3fr;
     gap: 1.25em;
 }
+
+.search-wrapper button {
+    font-size: 1em;
+    background-color: #000;
+    color: #fdcc04;
+    padding: 0.8em 0;
+    border: none;
+    border-radius: 1.5em;
+}
+
+.search-wrapper button:hover {
+    background-color: #fff;
+    color: #000;
+
+}
+
+.search {
+    background: #1DA1F2;
+}
